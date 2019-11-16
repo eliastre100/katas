@@ -19,5 +19,17 @@ RSpec.describe 'FooBarQix' do
     it 'should return \'Qix\' on 7' do
       expect(subject.compute('7')).to eql "Qix"
     end
+
+    it 'should return \'Foo\' for a multiple of 3' do
+      expect(subject.compute('6')).to eql 'Foo'
+    end
+
+    it 'sould return \'Bar\' for a multiple of 5' do
+      expect(subject.compute('10')).to eql 'Bar'
+    end
+
+    it 'should return \'Qix\' for a multiple of 7' do
+      expect(subject.compute('14')).to eql 'Qix'
+    end
   end
 end
